@@ -1,0 +1,15 @@
+<div class ="align-items-center justify-content-center">
+    <%= form_for @blog do |f| %>
+      <div  class="mb-3">
+        <%= f.label :title%>
+        <%= f.text_field :title, class: "form-control" %>
+      </div>
+            <div class="mb-3">
+                 <%= f.label :content%>
+                   <%= f.text_area :content, class: "form-control" %>
+            </div>
+                <div class="mb-3">
+                  <%= f.submit class:"btn btn-dark" %>
+                </div>
+            <% end %>
+</div> 

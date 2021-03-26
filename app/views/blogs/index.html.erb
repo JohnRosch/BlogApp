@@ -1,0 +1,13 @@
+<h1 style="text-align:center">My Blog Application</h1>
+<div class="d-flex flex-column align-items-center justify-content-center">
+     <div class="card w-75 align-items-center">
+         <div class="card-body mb-3">
+         <% @blogs.each do |blog| %>
+            <h3><%= link_to blog.title, blog_path(blog.id), class: "card-title" %></h3>
+            <% end %>
+         </div>
+      </div>
+     <%= link_to "Add Blog", new_blog_path, class:"btn btn-dark mt-3" %>
+
+</div> 
+
