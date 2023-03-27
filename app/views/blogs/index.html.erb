@@ -1,13 +1,22 @@
-<h1 style="text-align:center">My Blog Application</h1>
-<div class="d-flex flex-column align-items-center justify-content-center">
-     <div class="card w-75 align-items-center">
-         <div class="card-body mb-3">
-         <% @blogs.each do |blog| %>
-            <h3><%= link_to blog.title, blog_path(blog.id), class: "card-title" %></h3>
-            <% end %>
-         </div>
+
+<h1 class="text-center p-4">Ruby on Rails Blog App</h1>
+
+<div class="container">
+  <div class="row">
+    <% @blogs.each do |blog| %>
+      <div class="col-md-4 mb-4">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title"><%= blog.title %></h5>
+            <p class="card-text"><%= blog.content %></p>
+             <%= link_to "View", blog_path(blog.id), class: "btn btn-dark" %>
+          </div>
+        </div>
       </div>
-     <%= link_to "Add Blog", new_blog_path, class:"btn btn-dark mt-3" %>
+    <% end %>
+  </div>
+</div>
 
-</div> 
-
+<div class="d-flex align-items-center justify-content-center">
+       <%= link_to "Add Blog", new_blog_path, class:"btn btn-dark mt-3" %>
+</div>
