@@ -6,16 +6,20 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <nav class="navbar sticky-top bg-body-tertiary bg-dark">
-      <div class="container-fluid">
-      <a class="navbar-brand text-white" href="#">BlogApp</a>
-    </nav>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+     <%# NAVBAR SECTION %>
+    <nav class="navbar sticky-top bg-body-tertiary bg-dark">
+      <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">BlogApp</a>
+    </nav>
+
+    <%#FOOTER SECTION GOES HERE%>
     <%= yield %>
+    
   </body>
 </html>
